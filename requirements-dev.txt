@@ -1,3 +1,0 @@
-ipython
-pytest
-pyright
