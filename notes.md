@@ -4,9 +4,10 @@ A place to gather my thoughts and outline future work.
 
 ## Actions
 
-- [ ] add linter
+- [x] add linter
 - [ ] add pre-commit hooks to run linter
-- [ ] add dev dependencies to `pyproject.toml`
+    - not quite working as I want
+- [x] add dev dependencies to `pyproject.toml`
 - [ ] add github workflow that auto runs tests
 
 ## Linter
