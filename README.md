@@ -94,15 +94,24 @@ Ruff settings can be specified in `pyproject.toml`.
 
 ## Pre-commit hooks
 
-If you want to automate e.g. formatting and type checking before each commit, then create an
-executable `.git/hooks/pre-commit` with the following content:
+We can use [pre-commit](https://pre-commit.com/) to automatically setup our pre commit hooks. It is
+configured by `.pre-commit-config.yaml`.
 
-```sh
-#!/bin/sh
-set -eux
+Ensure dev dependencies are installed:
 
-ruff format --exit-non-zero-on-format || exit 1 # exit if ruff returns non-zero exit code
-pyright || exit 1 # exit if pyright returns non-zero exit code
+```bash
+python -m pip install .[dev]
 ```
 
-> **TODO**: only perform format on code to be committed
+Then install and setup `pre-commit`
+
+```bash
+pre-commit install
+```
+
+You can run on all files like so:
+```bash
+pre-commit run --all-files
+```
+
+Now this will be run on all new commits, rejecting any that fail and auto fixing that which it can.

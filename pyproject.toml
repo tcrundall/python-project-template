@@ -19,7 +19,13 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
 ]
 dependencies = [  ]
-optional-dependencies.dev = [ "ipython", "pyright", "pytest", "ruff" ]
+optional-dependencies.dev = [
+  "ipython",
+  "pyright",
+  "pytest",
+  "ruff",
+  "pre-commit",
+]
 gui-scripts.example-cli = "example:main_gui"
 
 [tool.ruff]
