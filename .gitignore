@@ -2,3 +2,7 @@
 build
 __pycache__
 *.egg-info
+
+# pytest byproducts
+junit
+.coverage
