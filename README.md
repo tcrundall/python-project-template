@@ -1,5 +1,7 @@
 # Template python project
 
+[![CI](https://github.com/tcrundall/python-project-template/actions/workflows/ci.yaml/badge.svg)](https://github.com/tcrundall/python-project-template/actions/workflows/ci.yaml)
+
 A fun way for me to craft a starting point for a python project.
 
 All commands are to be run in the project's top level directory (i.e. this one) unless specified
