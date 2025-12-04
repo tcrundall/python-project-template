@@ -15,7 +15,7 @@ I like using `uv` as my python version manager + other. If you are like me, repl
 Create a virtual environment:
 
 ```bash
-python -m venv
+python -m venv .venv
 ```
 
 Activate virtual environment:
