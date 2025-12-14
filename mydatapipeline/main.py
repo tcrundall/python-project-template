@@ -1,9 +1,12 @@
 import sys
 
-import analyzer
-import cleaner
-import configloader
 import pandas as pd
+
+from mydatapipeline import (
+    analyzer,
+    cleaner,
+    configloader,
+)
 
 COLUMN_MAPPINGS_KEY = "column-mappings"
 
