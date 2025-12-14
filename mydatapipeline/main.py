@@ -1,20 +1,15 @@
 import sys
 
-import pandas as pd
-
-from mydatapipeline import (
-    analyzer,
-    cleaner,
-    configloader,
-)
-
-COLUMN_MAPPINGS_KEY = "column-mappings"
+from mydatapipeline.pipeline import run
 
 USAGE = """
         Usage: python main.py my-config-file.json my-data.xlsx
         """
 
-if __name__ == "__main__":
+COLUMN_MAPPINGS_KEY = "column-mappings"
+
+
+def main():
     # ----------------------------------------
     #      Parse and validate user input
     # ----------------------------------------
@@ -31,28 +26,12 @@ if __name__ == "__main__":
         sys.exit(1)
 
     if excel_file.split(".")[-1] != "xlsx":
-        print("Expected a json file as first argument")
+        print("Expected an xlsx file as first argument")
         print(USAGE)
         sys.exit(1)
 
-    # ----------------------------------------
-    #      Read config and data
-    # ----------------------------------------
-    config = configloader.load(config_file)
-    for key, val in config[COLUMN_MAPPINGS_KEY].items():
-        print(f"{key=}, {val=}")
+    run(config_file, excel_file)
 
-    df = pd.read_excel(excel_file)
-    print(df)
 
-    # ----------------------------------------
-    #      Clean data
-    # ----------------------------------------
-    df = cleaner.map_columns(df, config[COLUMN_MAPPINGS_KEY])
-    print(f"Cleaned data: {df}")
-
-    # ----------------------------------------
-    #      Analyze data
-    # ----------------------------------------
-    sum = analyzer.sum_columns(df)
-    print(sum)
+if __name__ == "__main__":
+    main()

@@ -29,13 +29,13 @@ optional-dependencies.dev = [
   "ruff",
   "pre-commit",
 ]
-gui-scripts.example-cli = "example:main_gui"
+gui-scripts.run-pipeline = "mydatapipeline.main:main"
 
 [tool.ruff]
 
 [tool.pyright]
 include = [
-  "src",
+  "mydatapipeline",
   "test",
 ]
 exclude = [
