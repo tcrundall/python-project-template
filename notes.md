@@ -7,12 +7,12 @@ A place to gather my thoughts and outline future work.
 - [ ] add example excel workflow
     - [x] provide configuration as json
     - [x] map columns
-    - [ ] use functional, dependency injection model
-    - [ ] add unit tests
-    - [ ] add integration tests
-    - [ ] add readme
+    - [x] add unit tests
+    - [x] add integration tests
+    - [x] add readme
     - [ ] convert print statements to logging
     - [ ] add type safety to config parser
+    - [ ] use functional, dependency injection model
     - [ ] add type hints
 
 ## linter
