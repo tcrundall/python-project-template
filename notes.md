@@ -1,20 +1,27 @@
-# Notes
+# notes
 
 A place to gather my thoughts and outline future work.
 
-## Actions
+## actions
 
-- [x] add linter
-- [x] add pre-commit hooks to run linter
-    - not quite working as I want
-    - use [`pre-commit`](https://pre-commit.com/) to actually do this
-- [x] add dev dependencies to `pyproject.toml`
-- [ ] add github workflow that auto runs tests
+- [ ] add example excel workflow
+    - [ ] provide configuration as json
+    - [ ] map columns
+    - [ ] use functional, dependency injection model
+    - [ ] add unit tests
+    - [ ] add integration tests
 
-## Linter
+## linter
 
 [Ruff](https://docs.astral.sh/ruff/editors/setup/)
 
-## Set up project
+## set up project
 
 [pyproject.toml guide](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/)
+
+## backlog
+
+- add github workflow that auto runs tests
+- add pre-commit hooks to run linter
+    - initial attempt did not quite working as I want
+    - use [`pre-commit`](https://pre-commit.com/) to actually do this
