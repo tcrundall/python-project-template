@@ -1,9 +1,8 @@
 import sys
 
-import pandas as pd
-
 import cleaner
 import configloader
+import pandas as pd
 
 COLUMN_MAPPINGS_KEY = "column-mappings"
 
