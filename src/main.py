@@ -1,6 +1,8 @@
 import sys
+
 import pandas as pd
 
+import cleaner
 import configloader
 
 COLUMN_MAPPINGS_KEY = "column-mappings"
@@ -43,7 +45,7 @@ if __name__ == "__main__":
     # ----------------------------------------
     #      Clean data
     # ----------------------------------------
-    df = df.rename(columns=config[COLUMN_MAPPINGS_KEY])
+    df = cleaner.map_columns(df, config[COLUMN_MAPPINGS_KEY])
     print(f"Cleaned data: {df}")
 
     # ----------------------------------------
