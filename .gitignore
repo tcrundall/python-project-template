@@ -6,3 +6,6 @@ __pycache__
 # pytest byproducts
 junit
 .coverage
+
+# temp files
+*.xlsx#

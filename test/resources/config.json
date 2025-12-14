@@ -1,0 +1,8 @@
+{
+  "some-key": "some-val",
+  "column-mappings": {
+    "price-val": "price",
+    "cost-val": "price",
+    "time of day ": "time"
+  }
+}
