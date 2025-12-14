@@ -5,11 +5,15 @@ A place to gather my thoughts and outline future work.
 ## actions
 
 - [ ] add example excel workflow
-    - [ ] provide configuration as json
-    - [ ] map columns
+    - [x] provide configuration as json
+    - [x] map columns
     - [ ] use functional, dependency injection model
     - [ ] add unit tests
     - [ ] add integration tests
+    - [ ] add readme
+    - [ ] convert print statements to logging
+    - [ ] add type safety to config parser
+    - [ ] add type hints
 
 ## linter
 
