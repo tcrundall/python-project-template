@@ -1,5 +1,6 @@
 import sys
 
+import analyzer
 import cleaner
 import configloader
 import pandas as pd
@@ -50,5 +51,5 @@ if __name__ == "__main__":
     # ----------------------------------------
     #      Analyze data
     # ----------------------------------------
-    sum = df.sum(numeric_only=True)
+    sum = analyzer.sum_columns(df)
     print(sum)
