@@ -1,6 +1,7 @@
 import sys
-import json
 import pandas as pd
+
+import configloader
 
 COLUMN_MAPPINGS_KEY = "column-mappings"
 
@@ -32,9 +33,7 @@ if __name__ == "__main__":
     # ----------------------------------------
     #      Read config and data
     # ----------------------------------------
-    with open(config_file) as fp:
-        config = json.load(fp)
-    print(config)
+    config = configloader.load(config_file)
     for key, val in config[COLUMN_MAPPINGS_KEY].items():
         print(f"{key=}, {val=}")
 
