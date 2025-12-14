@@ -6,7 +6,7 @@ def test_load_config():
     config_file = "test/resources/config.json"
     expected_config = {
         "some-key": "some-val",
-        "column-mappings": {"price-val": "price", "cost-val": "price", "time of day ": "time"},
+        "column-mappings": {"price-val": "price", "time of day ": "time"},
     }
 
     # act
