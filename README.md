@@ -24,10 +24,15 @@ Activate virtual environment:
 source .venv/bin/activate
 ```
 
-Install dependencies:
+Install project (along with dependencies):
 
 ```bash
 python -m pip install .
+```
+
+You can now run the pipeline with the CLI:
+```bash
+run-pipeline path-to-config.json path-to-sheet.xlsx
 ```
 
 ## Run tests
@@ -42,16 +47,6 @@ Then run tests
 
 ```bash
 pytest
-```
-
-## Using tool
-
-There is currently a place holder "cli" (command line interface) `example-cli`. Assuming you
-installed the package as described above, you should be able to execute the cli:
-
-```bash
-exaple-cli
-> "Hello"
 ```
 
 ## Linting
@@ -71,7 +66,8 @@ Then run linter:
 ruff format
 ```
 
-Ruff settings can be specified in `pyproject.toml`.
+Ruff settings can be specified in `pyproject.toml`. See below for how to configure git to auto run
+linting when committing.
 
 ## Type hints
 
@@ -116,4 +112,4 @@ You can run on all files like so:
 pre-commit run --all-files
 ```
 
-Now this will be run on all new commits, rejecting any that fail and auto fixing that which it can.
+Now this will be run on all new commits, rejecting any that fail and auto fixing those which it can.
